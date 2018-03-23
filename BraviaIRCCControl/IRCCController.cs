@@ -9,14 +9,16 @@ namespace BraviaIRCCControl
 {
     public class IRCCController
     {
-        public IRCCController(string hostName, int port = 80)
+        public IRCCController(string hostName, int port = 80, string pinCode = "0000")
         {
             this.HostName = hostName;
             this.Port = port;
+            this.PinCode = pinCode;
         }
 
         public string HostName { get; private set; }
         public int Port { get; private set; }
+        public string PinCode { get; private set; }
 
         public async Task Send(IRCCCodes code)
         {
@@ -40,7 +42,7 @@ namespace BraviaIRCCControl
             req.ContentLength = bytes.Length;
 
             req.Headers.Add("SOAPAction", "\"urn:schemas-sony-com:service:IRCC:1#X_SendIRCC\"");
-            req.Headers.Add("X-Auth-PSK", "0000");
+            req.Headers.Add("X-Auth-PSK", PinCode);
 
             try
             {
