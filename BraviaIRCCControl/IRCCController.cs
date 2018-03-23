@@ -20,7 +20,7 @@ namespace BraviaIRCCControl
         public int Port { get; private set; }
         public string PinCode { get; private set; }
 
-        public async Task Send(IRCCCodes code)
+        public async Task<bool> Send(IRCCCodes code)
         {
             string response = "";
             StringBuilder body = new StringBuilder("<?xml version=\"1.0\"?>");
@@ -66,10 +66,14 @@ namespace BraviaIRCCControl
                 else
                 {
                 }
+
+                return isOK;
             }
             catch
             {
             }
+
+            return false;
         }
     }
 }
