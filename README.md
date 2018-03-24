@@ -4,10 +4,10 @@
 # BraviaIRCCControl
 Simple .Net wrapper to control Sony Bravia devices through IRCC
 
-## Retribution
+## Contribution
 If you find this package useful, please make a gift on Paypal : [https://www.paypal.me/roddone](https://www.paypal.me/roddone)
 
-## Contribution
+## Help
 Do pull requests to implement more features !
 
 ## Prerequisites

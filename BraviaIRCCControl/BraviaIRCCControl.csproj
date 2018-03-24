@@ -6,7 +6,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Romain ODDONE</Authors>
     <Copyright>Copyright © Romain ODDONE 2018</Copyright>
-    <PackageLicenseUrl>https://github.com/roddone/BraviaIRCCControl/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/roddone/BraviaIRCCControl/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/roddone/BraviaIRCCControl/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/roddone/BraviaIRCCControl/</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
