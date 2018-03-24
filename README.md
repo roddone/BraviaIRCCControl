@@ -21,7 +21,7 @@ The Pre-Shared Key will be asked when connecting.
 
 Instanciate a "BraviaIRCCControl.IRCCController", and simply use the "Send" method with an IRCCCode:
 
-````csharp
+```csharp
 	IRCCController control = new IRCCController(hostname /*, port = 80, pinCode = "Pre-Shared-Key"*/);
 	await control.Send(IRCCCodes.VolumeUp);
 	await control.Send(IRCCCodes.VolumeDown);
