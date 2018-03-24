@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Linq;
 using System.Reflection;
-using System.Linq;
 
-namespace BraviaIRCCControl
+namespace BraviaIRCCControl.Core
 {
-    public class IRCCCodeAttribute : Attribute
+    internal static class IRCCCodesExtension
     {
-        public IRCCCodeAttribute(string code)
-        {
-            this.Code = code;
-        }
+        #region Public Methods
 
-        public string Code { get; private set; }
-    }
-
-    public static class IRCCCodesExtension
-    {
         public static string GetCode(this IRCCCodes code)
         {
             MemberInfo memberInfo = typeof(IRCCCodes).GetMember(code.ToString())
@@ -33,5 +22,7 @@ namespace BraviaIRCCControl
 
             return null;
         }
+
+        #endregion Public Methods
     }
 }
