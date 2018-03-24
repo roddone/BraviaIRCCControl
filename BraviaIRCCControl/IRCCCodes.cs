@@ -1,336 +1,260 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BraviaIRCCControl
+﻿namespace BraviaIRCCControl
 {
     public enum IRCCCodes
     {
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAABlAw==")]
+        [IRCCCode("AAAAAQAAAAEAAABlAw==")]
         Confirm,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAB0Aw==")]
+        [IRCCCode("AAAAAQAAAAEAAAB0Aw==")]
         Up,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAB1Aw==")]
+        [IRCCCode("AAAAAQAAAAEAAAB1Aw==")]
         Down,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAzAw==")]
+        [IRCCCode("AAAAAQAAAAEAAAAzAw==")]
         Right,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAA0Aw==")]
+        [IRCCCode("AAAAAQAAAAEAAAA0Aw==")]
         Left,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAABgAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAABgAw==")]
         Home,
 
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAA2Aw==")]
-
+        [IRCCCode("AAAAAgAAAJcAAAA2Aw==")]
         Options,
 
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAjAw==")]
-
+        [IRCCCode("AAAAAgAAAJcAAAAjAw==")]
         Return,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAAAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAAAw==")]
         Num1,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAABAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAABAw==")]
         Num2,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAACAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAACAw==")]
         Num3,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAADAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAADAw==")]
         Num4,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAEAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAEAw==")]
         Num5,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAFAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAFAw==")]
         Num6,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAGAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAGAw==")]
         Num7,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAHAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAHAw==")]
         Num8,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAIAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAIAw==")]
         Num9,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAJAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAJAw==")]
         Num0,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAKAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAKAw==")]
         Num11,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAALAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAALAw==")]
         Num12,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAVAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAVAw==")]
         Power,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAA6Aw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAA6Aw==")]
         Display,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAASAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAASAw==")]
         VolumeUp,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAATAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAATAw==")]
         VolumeDown,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAUAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAUAw==")]
         Mute,
 
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAXAw==")]
-
+        [IRCCCode("AAAAAQAAAAEAAAAXAw==")]
         Audio,
 
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAoAw==")]
-
+        [IRCCCode("AAAAAgAAAJcAAAAoAw==")]
         SubTitle,
 
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAnAw==")]
-
+        [IRCCCode("AAAAAgAAAJcAAAAnAw==")]
         Yellow,
 
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAkAw==")]
-
+        [IRCCCode("AAAAAgAAAJcAAAAkAw==")]
         Blue,
 
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAlAw==")]
-
+        [IRCCCode("AAAAAgAAAJcAAAAlAw==")]
         Red,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAmAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAmAw==")]
         Green,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAaAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAaAw==")]
         Play,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAYAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAYAw==")]
         Stop,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAZAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAZAw==")]
         Pause,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAbAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAbAw==")]
         Rewind,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAcAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAcAw==")]
         Forward,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAA8Aw==")]
+        [IRCCCode("AAAAAgAAAJcAAAA8Aw==")]
         Prev,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAA9Aw==")]
+        [IRCCCode("AAAAAgAAAJcAAAA9Aw==")]
         Next,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAB5Aw==")]
+        [IRCCCode("AAAAAgAAAJcAAAB5Aw==")]
         Replay,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAB4Aw==")]
+        [IRCCCode("AAAAAgAAAJcAAAB4Aw==")]
         Advance,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAABgAw==")]
+        [IRCCCode("AAAAAgAAABoAAABgAw==")]
         TopMenu,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAABhAw==")]
+        [IRCCCode("AAAAAgAAABoAAABhAw==")]
         PopUpMenu,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAABIAw==")]
+        [IRCCCode("AAAAAgAAAJcAAABIAw==")]
         Eject,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAgAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAgAw==")]
         Rec,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAABYAw==")]
+        [IRCCCode("AAAAAgAAABoAAABYAw==")]
         SyncMenu,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAKQAAAAQAw==")]
+        [IRCCCode("AAAAAgAAAKQAAAAQAw==")]
         ClosedCaption,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAA/Aw==")]
+        [IRCCCode("AAAAAQAAAAEAAAA/Aw==")]
         Teletext,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAQAw==")]
+        [IRCCCode("AAAAAQAAAAEAAAAQAw==")]
         ChannelUp,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAARAw==")]
+        [IRCCCode("AAAAAQAAAAEAAAARAw==")]
         ChannelDown,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAlAw==")]
+        [IRCCCode("AAAAAQAAAAEAAAAlAw==")]
         Input,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAAOAw==")]
+        [IRCCCode("AAAAAQAAAAEAAAAOAw==")]
         GGuide,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAKQAAABbAw==")]
+        [IRCCCode("AAAAAgAAAKQAAABbAw==")]
         EPG,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAdAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAdAw==")]
         DOT,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAHcAAAANAw==")]
+        [IRCCCode("AAAAAgAAAHcAAAANAw==")]
         Analog,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAABjAw==")]
+        [IRCCCode("AAAAAQAAAAEAAABjAw==")]
         Exit,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAyAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAyAw==")]
         Digital,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAsAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAsAw==")]
         BS,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAArAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAArAw==")]
         CS,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAQAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAQAw==")]
         BSCS,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAVAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAVAw==")]
         Ddata,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAAB6Aw==")]
+        [IRCCCode("AAAAAgAAABoAAAB6Aw==")]
         InternetWidgets,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAAB5Aw==")]
+        [IRCCCode("AAAAAgAAABoAAAB5Aw==")]
         InternetVideo,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAAB4Aw==")]
+        [IRCCCode("AAAAAgAAABoAAAB4Aw==")]
         SceneSelect,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAHcAAABNAw==")]
+        [IRCCCode("AAAAAgAAAHcAAABNAw==")]
         Mode3D,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAAB7Aw==")]
+        [IRCCCode("AAAAAgAAABoAAAB7Aw==")]
         iManual,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAKQAAAA9Aw==")]
+        [IRCCCode("AAAAAgAAAKQAAAA9Aw==")]
         Wide,
 
-
-        [IRCCCodeAttribute("AAAAAQAAAAEAAAA7Aw==")]
+        [IRCCCode("AAAAAQAAAAEAAAA7Aw==")]
         Jump,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAKQAAAB3Aw==")]
+        [IRCCCode("AAAAAgAAAKQAAAB3Aw==")]
         PAP,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAHcAAABrAw==")]
+        [IRCCCode("AAAAAgAAAHcAAABrAw==")]
         MyEPG,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAWAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAWAw==")]
         ProgramDescription,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAHcAAABsAw==")]
+        [IRCCCode("AAAAAgAAAHcAAABsAw==")]
         WriteChapter,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAAB+Aw==")]
+        [IRCCCode("AAAAAgAAABoAAAB+Aw==")]
         TrackID,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAJcAAAAMAw==")]
+        [IRCCCode("AAAAAgAAAJcAAAAMAw==")]
         TenKey,
 
-        [IRCCCodeAttribute("AAAAAgAAABoAAABvAw==")]
+        [IRCCCode("AAAAAgAAABoAAABvAw==")]
         AppliCast,
 
-
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAAByAw==")]
+        [IRCCCode("AAAAAgAAABoAAAByAw==")]
         acTVila,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAHcAAAAfAw==")]
+        [IRCCCode("AAAAAgAAAHcAAAAfAw==")]
         DeleteVideo,
 
-
-        [IRCCCodeAttribute("AAAAAgAAAHcAAABqAw==")]
+        [IRCCCode("AAAAAgAAAHcAAABqAw==")]
         EasyStartUp,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAABkAw==")]
+        [IRCCCode("AAAAAgAAABoAAABkAw==")]
         OneTouchTimeRec,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAABlAw==")]
+        [IRCCCode("AAAAAgAAABoAAABlAw==")]
         OneTouchView,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAABiAw==")]
+        [IRCCCode("AAAAAgAAABoAAABiAw==")]
         OneTouchRec,
 
-
-        [IRCCCodeAttribute("AAAAAgAAABoAAABjAw==")]
+        [IRCCCode("AAAAAgAAABoAAABjAw==")]
         OneTouchRecStop,
 
+        [IRCCCode("AAAAAgAAABoAAABaAw==")]
+        HDMI1,
 
+        [IRCCCode("AAAAAgAAABoAAABbAw==")]
+        HDMI2,
+
+        [IRCCCode("AAAAAgAAABoAAABcAw==")]
+        HDMI3,
+
+        [IRCCCode("AAAAAgAAABoAAABdAw==")]
+        HDMI4,
     }
 }
