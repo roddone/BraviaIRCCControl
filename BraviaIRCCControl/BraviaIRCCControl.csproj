@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0; net45; net46; net47</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>Romain ODDONE</Authors>
+    <Copyright>Copyright © Romain ODDONE 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/roddone/BraviaIRCCControl/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/roddone/BraviaIRCCControl/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/roddone/BraviaIRCCControl/</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
+    <Description>Simple .Net wrapper to control Sony Bravia devices through IRCC</Description>
+    <PackageTags>Sony Bravia IRCC .net c# iot</PackageTags>
+    <PackageIconUrl>https://github.com/roddone/BraviaIRCCControl/raw/master/BraviaIRCCControl/icon.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>
