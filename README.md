@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/roddone/BraviaIRCCControl.svg?branch=master)](https://travis-ci.org/roddone/BraviaIRCCControl)
+[![NuGet Package](https://img.shields.io/nuget/v/BraviaIRCCControl.svg)](https://www.nuget.org/packages/BraviaIRCCControl/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/BraviaIRCCControl.svg)](https://www.nuget.org/packages/BraviaIRCCControl/)
 [![Donate](https://img.shields.io/badge/%24-donate-ff00ff.svg)](https://www.paypal.me/roddone)
 
 # BraviaIRCCControl
