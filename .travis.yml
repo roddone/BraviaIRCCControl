@@ -1,0 +1,8 @@
+language: csharp
+solution: "BraviaIRCCControl.sln"
+dotnet: 2.0.0
+before_script:
+- travis_retry msbuild /t:Restore BraviaIRCCControl.sln
+script:
+- msbuild /p:Configuration=Release BraviaIRCCControl.sln
+- msbuild /p:Configuration=Debug BraviaIRCCControl.sln
