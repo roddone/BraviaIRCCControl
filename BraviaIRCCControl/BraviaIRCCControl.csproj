@@ -10,10 +10,16 @@
     <PackageProjectUrl>https://github.com/roddone/BraviaIRCCControl/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/roddone/BraviaIRCCControl/</RepositoryUrl>
     <RepositoryType>Github</RepositoryType>
-    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
+    <PackageReleaseNotes>Add README.txt</PackageReleaseNotes>
     <Description>Simple .Net wrapper to control Sony Bravia devices through IRCC</Description>
     <PackageTags>Sony Bravia IRCC .net c# iot</PackageTags>
     <PackageIconUrl>https://github.com/roddone/BraviaIRCCControl/raw/master/BraviaIRCCControl/icon.png</PackageIconUrl>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.txt" Pack="true" PackagePath="." />
+  </ItemGroup>
 
 </Project>
