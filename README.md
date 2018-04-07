@@ -46,3 +46,17 @@ For example :
 
 For the moment there is not a lot of extensions, but you can implement others via pull request.
 
+## Extensions (bis)
+
+You can directly use extensions methods on the "IRCCCodes" Enum. To do so, you have to initialize extensions with the controller you want to use, and then call the send method on the enum valu you want to send : 
+```csharp
+	IRCCController control = new IRCCController(hostname, pinCode: pin);
+	IRCCCodesExtension.InitializeController(control);
+	
+	await IRCCCodes.VolumeUp.Send();
+	await IRCCCodes.VolumeDown.Send();
+	await IRCCCodes.HDMI1.Send();
+
+	//use another controller just one time 
+	await IRCCCodes.HDMI1.Send(anotherController);
+```

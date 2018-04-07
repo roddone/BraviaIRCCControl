@@ -1,5 +1,10 @@
-﻿namespace BraviaIRCCControl
+﻿using BraviaIRCCControl.Core;
+
+namespace BraviaIRCCControl
 {
+    /// <summary>
+    /// Availables codes
+    /// </summary>
     public enum IRCCCodes
     {
         [IRCCCode("AAAAAQAAAAEAAABlAw==")]

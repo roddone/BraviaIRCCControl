@@ -1,4 +1,4 @@
-﻿using BraviaIRCCControl.Core;
+﻿using BraviaIRCCControl.Extensions;
 using System;
 using System.IO;
 using System.Net;
@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BraviaIRCCControl
 {
+    /// <summary>
+    /// IRCC Controller for Sony Bravia devices 
+    /// </summary>
     public class IRCCController
     {
         #region Private Fields
@@ -17,18 +20,36 @@ namespace BraviaIRCCControl
 
         #region Public Properties
 
+        /// <summary>
+        /// Host name
+        /// </summary>
         public string HostName { get; private set; }
 
+        /// <summary>
+        /// Pin Code
+        /// </summary>
         public string PinCode { get; private set; }
 
+        /// <summary>
+        /// Port
+        /// </summary>
         public int Port { get; private set; }
 
+        /// <summary>
+        /// Url
+        /// </summary>
         public string Url { get; private set; }
 
         #endregion Public Properties
 
         #region Public Constructors
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="hostName"></param>
+        /// <param name="port"></param>
+        /// <param name="pinCode"></param>
         public IRCCController(string hostName, int port = 80, string pinCode = "0000")
         {
             this.HostName = hostName;
@@ -42,6 +63,11 @@ namespace BraviaIRCCControl
 
         #region Public Methods
 
+        /// <summary>
+        /// Send an IRCC control code to the device
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
         public async Task<bool> Send(IRCCCodes code)
         {
             string parameters = string.Format(_soapEnvelopeTemplate, code.GetCode());
@@ -78,7 +104,7 @@ namespace BraviaIRCCControl
 
                 return isOK;
             }
-            catch (Exception) { }
+            catch (Exception ex) {  }
 
             return false;
         }

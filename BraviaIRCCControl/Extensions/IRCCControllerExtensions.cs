@@ -2,6 +2,9 @@
 
 namespace BraviaIRCCControl.Extensions
 {
+    /// <summary>
+    /// Extensions to class "IRCCController"
+    /// </summary>
     public static class IRCCControllerExtensions
     {
         #region Public Methods
